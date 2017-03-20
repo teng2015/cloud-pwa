@@ -1,20 +1,28 @@
 @import "../../assets/styles/base";
 
 #app {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/*----- 首页 -----*/
+.index-wrap {
   display: flex;
   flex-direction: column;
   width: 100%;
   height: 100%;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   text-align: center;
   color: #2c3e50;
 }
 
+/*-- 头部 --*/
 .account-info {
   position: relative;
   display: flex;
   flex-direction: column;
-  order: 1;
   padding: 44px 10px 24px;
   background-color: #418bce;
   box-shadow: inset 0 3px 5px #4389c0;
@@ -22,12 +30,11 @@
 }
 
 .account-avatar {
-  width: 80px;
-  height: 80px;
+  width: 84px;
+  height: 84px;
   margin: 0 auto 8px;
   border-radius: 50%;
   border: 2px solid #fff;
-  /*font-size: 0;*/
   overflow: hidden;
 
   .avatar {
@@ -41,7 +48,7 @@
   margin: 0 auto 20px;
   white-space: nowrap;
   text-overflow: ellipsis;
-  font-size: 16px;
+  font-size: 1.6rem;
   color: #fff;
   overflow: hidden;
 }
@@ -54,23 +61,61 @@
     top: 0;
     right: 8px;
     line-height: 24px;
+    font-size: 1.4rem;
     color: #fff;
+  }
+
+  .volume {
+    height: 18px;
+    padding: 3px;
+    border-radius: 3px;
+    background-color: #367fbf;
+    box-sizing: content-box;
+  }
+
+  .volume-used {
+    float: left;
+    width: 23%;
+    height: 18px;
+    border-radius: 3px 0 0 3px;
+    background-color: #feb20a;
+
+    &.volume-189-used {
+      width: 1%;
+      border-radius: 0 3px 3px 0;
+      background-color: #8ccb00;
+    }
   }
 }
 
+.account-logout {
+  position: absolute;
+  top: 22px;
+  left: 13px;
+  height: 16px;
+  padding-left: 20px;
+  line-height: 16px;
+  color: #fff;
+  background: url(images/logout.png) no-repeat left center;
+  background-size: auto 100%;
+}
+
+/*-- 链接区 --*/
 .router-box {
   display: flex;
   flex-wrap: wrap;
-  order: 2;
-  flex: 0 1 auto;
+  flex: 1 1 auto;
+  justify-content: space-between;
+  padding: 20px 10px;
 }
 
 .router {
   display: inline-flex;
-  min-width: 25%;
-  height: 6rem;
+  width: 48%;
+  height: 98px;
   justify-content: center;
   align-items: center;
+  background-color: #fa6567;
 
   &:active {
     color: #fff;
