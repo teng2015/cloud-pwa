@@ -33,7 +33,7 @@
   font-size: px2px(14px);
   text-align: center;
   color: #2c3e50;
-  line-height: 1;
+  /*line-height: 1;*/
   letter-spacing: px2px(1px);
   overflow-x: hidden;
   overflow-y: scroll;
@@ -49,6 +49,7 @@
 }
 
 .account-avatar {
+  display: block;
   width: px2rem(84px);
   height: px2rem(84px);
   margin: 0 auto px2px(8px);

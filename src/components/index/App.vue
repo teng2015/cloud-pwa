@@ -1,14 +1,13 @@
 <template>
   <div id="app">
+    <!-- 首页 -->
     <div class="index-wrap">
-      <!-- 首页头部 -->
+      <!-- 头部 -->
       <div class="account-info">
-        <div class="account-avatar">
-          <router-link id="J_HomePage" to="/user">
-            <img id="J_UserIcon" class="avatar" src="./images/account-user.png" alt="用户头像">
-          </router-link>
-        </div>
-        <div id="J_UserAccount" class="account-name">天翼用户</div>
+        <router-link class="account-avatar" to="/user">
+          <img id="J_UserIcon" class="avatar" src="./images/account-user.png" alt="用户头像">
+        </router-link>
+        <div class="account-name">天翼用户</div>
 
         <div class="account-volume">
           <div class="count">
@@ -19,7 +18,7 @@
             <div id="J_Used189Percent" class="volume-used volume-189-used"></div>
           </div>
         </div>
-        <a id="J_Logout" class="account-logout" v-on:click.prevent="alert('您点击了退出')">退出</a>
+        <a class="account-logout" v-on:click.prevent="alert('您点击了退出')">退出</a>
       </div>
 
       <!-- 链接区 -->
@@ -42,6 +41,7 @@
       </ul>
     </div>
 
+    <!-- 其他页 -->
     <router-view class="router-view"></router-view>
   </div>
 </template>

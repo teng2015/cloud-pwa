@@ -1,0 +1,124 @@
+{
+  "data": [
+    {
+      "createTime": "2017-03-20 18:17:37",
+      "fileId": "8145431400703442",
+      "fileIdDigest": "25C6A5A083FED7C761EDF8A40CE414D51CBAD7C7C479521DE7844E3E599BB82EBB7BE947D23B1409B6CFBB6EEB598A6F94ED5952",
+      "fileName": "IOS全新精美风格PPT模板",
+      "fileSize": 0,
+      "fileType": "",
+      "groupSpaceInfo": {
+        "groupSpaceType": 0
+      },
+      "isFolder": true,
+      "isStarred": false,
+      "lastOpTime": "2017-03-20 18:17:37",
+      "parentId": "2155011396146550"
+    },
+    {
+      "createTime": "2017-03-20 18:20:11",
+      "fileId": "4148311393505044",
+      "fileIdDigest": "EAB09DB84687477A5695C6E693A265A22371EC76A0879DEB6A6C9C3BEF8CE5AD67F6907075A0F94EBC3AFC3594A651105628616E",
+      "fileName": "图片",
+      "fileSize": 0,
+      "fileType": "",
+      "groupSpaceInfo": {
+        "groupSpaceType": 0
+      },
+      "isFolder": true,
+      "isStarred": false,
+      "lastOpTime": "2017-03-20 18:20:36",
+      "parentId": "2155011396146550"
+    },
+    {
+      "createTime": "2017-03-20 18:19:12",
+      "fileId": "4148311393504797",
+      "fileIdDigest": "FA98148F4D94EC9C388CB9839C55A0955868330E91840EC4C98F5BB0FA99B2AA3B044F536CA39DCBE31889B3793707191D21D468",
+      "fileName": "嵌套文件夹",
+      "fileSize": 0,
+      "fileType": "",
+      "groupSpaceInfo": {
+        "groupSpaceType": 0
+      },
+      "isFolder": true,
+      "isStarred": false,
+      "lastOpTime": "2017-03-20 18:19:24",
+      "parentId": "2155011396146550"
+    },
+    {
+      "createTime": "2017-03-20 18:20:25",
+      "fileId": "1147211694438161",
+      "fileIdDigest": "30A98D07C828D9B365C0B523FDC33A18FDF1179DEA50F6F3BA81F950F6D8FB05C790E71E0ACFFF357F4F756976E74A66AAB2CA58",
+      "fileName": "文档",
+      "fileSize": 0,
+      "fileType": "",
+      "groupSpaceInfo": {
+        "groupSpaceType": 0
+      },
+      "isFolder": true,
+      "isStarred": false,
+      "lastOpTime": "2017-03-20 18:21:01",
+      "parentId": "2155011396146550"
+    },
+    {
+      "createTime": "2017-03-20 18:17:38",
+      "fileId": "8145431400703462",
+      "fileIdDigest": "73335F1CF3BE6078EC2F0FB80CAA3EDF7ED865C1B100B7F3894A3FF68825419454EE23B5C18F3E20A20086E1BD3F219B0B32A90E",
+      "fileName": "网络、科技-35套",
+      "fileSize": 0,
+      "fileType": "",
+      "groupSpaceInfo": {
+        "groupSpaceType": 0
+      },
+      "isFolder": true,
+      "isStarred": false,
+      "lastOpTime": "2017-03-20 18:17:38",
+      "parentId": "2155011396146550"
+    },
+    {
+      "createTime": "2017-03-20 18:17:40",
+      "fileId": "8145431400703499",
+      "fileIdDigest": "09D59413C2E96FDA108A225E778DF4A2FF4EC4678E21F177636672D324CB99A319AE167790287C458879D167655BB029C184EB2B",
+      "fileName": "这个PPT逼格有点高@",
+      "fileSize": 0,
+      "fileType": "",
+      "groupSpaceInfo": {
+        "groupSpaceType": 0
+      },
+      "isFolder": true,
+      "isStarred": false,
+      "lastOpTime": "2017-03-20 18:17:40",
+      "parentId": "2155011396146550"
+    },
+    {
+      "createTime": "2017-03-20 18:20:16",
+      "fileId": "4148311393505069",
+      "fileIdDigest": "F656F95200617D69C5FBE98537074223165F69DD0B37B6DA74BA920F5E055B77848D3FC3314385B07D88011EFAEFFB4B50721AED",
+      "fileName": "音乐",
+      "fileSize": 0,
+      "fileType": "",
+      "groupSpaceInfo": {
+        "groupSpaceType": 0
+      },
+      "isFolder": true,
+      "isStarred": false,
+      "lastOpTime": "2017-03-20 18:20:49",
+      "parentId": "2155011396146550"
+    }
+  ],
+  "pageNum": 1,
+  "pageSize": 60,
+  "path": [
+    {
+      "fileId": "-11",
+      "fileName": "全部文件",
+      "isCoShare": 0
+    },
+    {
+      "fileId": "2155011396146550",
+      "fileName": "测试专用",
+      "isCoShare": 0
+    }
+  ],
+  "recordCount": 7
+}

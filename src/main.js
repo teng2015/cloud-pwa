@@ -1,19 +1,20 @@
 import Vue from 'vue'
-import App from './components/index/App'
-import router from './router'
+//import App from './components/index/App'
+import List from './components/list/List'
+//import router from './router'
 
 Vue.config.productionTip = false;
 
 new Vue({
   el: '#app',
-  router,
+  //router,
   /*template: '<App/>',
    components: {App},*/
-  render: h => h(App)
+  render: h => h(List)
 });
 
 /* 动态设置 html font-size 函数 */
-(function () {
+(function (window, document) {
   let dpr, rem, scale;
   let docEl = document.documentElement;
   let fontEl = document.createElement('style');
@@ -50,4 +51,4 @@ new Vue({
 
   console.log(dpr);
   console.log(rem);
-})();
+})(window, document);

@@ -1,0 +1,41 @@
+@import "../../assets/styles/base.scss";
+
+/* px 转 rem，此时html的字体大小为 16px */
+@function px2rem($px) {
+  $rem: 75px;
+  @return ($px/$rem)*2 + rem;
+}
+
+/* px 转 rem，此时html的字体大小为 16px */
+@function px2px($px) {
+  @return $px*2;
+}
+
+.file-container {
+  font-size: px2px(14px);
+}
+
+.breadcrumb {
+  position: relative;
+  padding: 8px 0 8px 15px;
+  border-top: 1px solid #D1DCE3;
+  background-color: #E9F1F6;
+  color: #5E6163;
+  line-height: px2rem(24px);
+}
+
+.file-path {
+  overflow: hidden;
+
+  li {
+    float: left;
+  }
+
+  a {
+    text-decoration: none;
+    color: #0080BD;
+    display: inline-block;
+    float: left;
+    word-break: break-all;
+  }
+}
