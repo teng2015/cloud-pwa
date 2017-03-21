@@ -3,6 +3,18 @@
 module.exports = {
   "plugins": {
     // to edit target browsers: use "browserlist" field in package.json
-    "autoprefixer": {}
+    "autoprefixer": {
+      browser: [
+        "IOS = 10"
+      ]
+    }
   }
 };
+
+/*
+ ,
+ "browserslist": [
+ "Android >= 2.3",
+ "IOS >= 7"
+ ]
+ * */

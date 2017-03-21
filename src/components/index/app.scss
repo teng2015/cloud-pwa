@@ -1,4 +1,20 @@
+/**
+ * @天翼云PWA
+ * @zhangzhp1
+ * @date 2017-03-20
+ */
 @import "../../assets/styles/base";
+
+/* px 转 rem，此时html的字体大小为 16px */
+@function px2rem($px) {
+  $rem: 75px;
+  @return ($px/$rem)*2 + rem;
+}
+
+/* px 转 rem，此时html的字体大小为 16px */
+@function px2px($px) {
+  @return $px*2;
+}
 
 #app {
   position: relative;
@@ -7,34 +23,37 @@
   overflow: hidden;
 }
 
-/*----- 首页 -----*/
+/* 首页
+---------------------------------------------------------------- */
 .index-wrap {
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 100%;
-  font-size: 1.4rem;
+  min-height: 100%;
+  font-size: px2px(14px);
   text-align: center;
   color: #2c3e50;
+  line-height: 1;
+  letter-spacing: px2px(1px);
+  overflow-x: hidden;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
 }
 
 /*-- 头部 --*/
 .account-info {
   position: relative;
-  display: flex;
-  flex-direction: column;
-  padding: 44px 10px 24px;
+  padding: px2px(44px) px2px(10px) px2px(24px);
   background-color: #418bce;
-  box-shadow: inset 0 3px 5px #4389c0;
-  text-align: center;
+  box-shadow: inset 0 px2px(3px) px2px(5px) #4389c0;
 }
 
 .account-avatar {
-  width: 84px;
-  height: 84px;
-  margin: 0 auto 8px;
+  width: px2rem(84px);
+  height: px2rem(84px);
+  margin: 0 auto px2px(8px);
   border-radius: 50%;
-  border: 2px solid #fff;
+  border: px2px(2px) solid #fff;
   overflow: hidden;
 
   .avatar {
@@ -45,10 +64,10 @@
 
 .account-name {
   width: 60%;
-  margin: 0 auto 20px;
+  margin: 0 auto px2px(20px);
   white-space: nowrap;
   text-overflow: ellipsis;
-  font-size: 1.6rem;
+  font-size: px2px(16px);
   color: #fff;
   overflow: hidden;
 }
@@ -59,30 +78,28 @@
   .count {
     position: absolute;
     top: 0;
-    right: 8px;
-    line-height: 24px;
-    font-size: 1.4rem;
+    right: px2px(8px);
+    line-height: px2px(24px);
     color: #fff;
   }
 
   .volume {
-    height: 18px;
-    padding: 3px;
-    border-radius: 3px;
+    height: px2rem(24px);
+    padding: px2rem(3px);
+    border-radius: px2px(3px);
     background-color: #367fbf;
-    box-sizing: content-box;
   }
 
   .volume-used {
     float: left;
     width: 23%;
-    height: 18px;
-    border-radius: 3px 0 0 3px;
+    height: 100%;
+    border-radius: px2px(3px) 0 0 px2px(3px);
     background-color: #feb20a;
 
     &.volume-189-used {
       width: 1%;
-      border-radius: 0 3px 3px 0;
+      border-radius: 0 px2px(3px) px2px(3px) 0;
       background-color: #8ccb00;
     }
   }
@@ -90,11 +107,11 @@
 
 .account-logout {
   position: absolute;
-  top: 22px;
-  left: 13px;
-  height: 16px;
-  padding-left: 20px;
-  line-height: 16px;
+  top: px2rem(22px);
+  left: px2rem(13px);
+  height: px2px(16px);
+  padding-left: px2rem(20px);
+  line-height: px2px(16px);
   color: #fff;
   background: url(images/logout.png) no-repeat left center;
   background-size: auto 100%;
@@ -104,26 +121,62 @@
 .router-box {
   display: flex;
   flex-wrap: wrap;
-  flex: 1 1 auto;
   justify-content: space-between;
-  padding: 20px 10px;
-}
-
-.router {
-  display: inline-flex;
-  width: 48%;
-  height: 98px;
-  justify-content: center;
   align-items: center;
-  background-color: #fa6567;
+  padding: px2rem(20px) px2rem(10px);
 
-  &:active {
+  .router {
+    width: 49%;
+    height: px2rem(98px);
+    margin-bottom: 40px;
+    line-height: 1;
+
+    &.folder {
+      background: #92cf69 url(images/link-01.png) center 30% no-repeat;
+      background-size: auto 70px;
+    }
+
+    &.favorite {
+      background: #59b5e2 url(images/link-02.png) center 30% no-repeat;
+      background-size: auto 80px;
+    }
+
+    &.group {
+      background: #fdbc2c url(images/link-03.png) center 30% no-repeat;
+      background-size: auto 86px;
+    }
+
+    &.hot {
+      background: #fa6567 url(images/link-04.png) center 30% no-repeat;
+      background-size: auto 84px;
+    }
+
+    &.square {
+      background: #f7784a url(images/link-05.png) center 30% no-repeat;
+      background-size: auto 95px;
+    }
+
+    &:active {
+      color: #fff;
+      background-color: skyblue;
+      background-size: 30% auto;
+    }
+  }
+
+  .link {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding-top: 40%;
     color: #fff;
-    background-color: skyblue;
   }
 }
 
 .router-view {
-  order: 3;
-  flex: 1 1 auto;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #fff;
 }
