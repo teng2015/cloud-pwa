@@ -7,7 +7,6 @@ function formatSize(value) {
    * */
   range = value < 1024 * 1024 ? 1
     : ( range = value < 1024 * 1024 * 1024 ? 2 : 3);
-  console.log(range);
 
   switch (range) {
     case 1:
