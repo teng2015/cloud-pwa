@@ -1,16 +1,16 @@
 import Vue from 'vue'
-//import App from './components/index/App'
-import List from './components/list/List'
-//import router from './router'
+import App from './components/index/App'
+//import List from './components/list/List'
+import router from './router'
 
 Vue.config.productionTip = false;
 
 new Vue({
   el: '#app',
-  //router,
+  router,
   /*template: '<App/>',
    components: {App},*/
-  render: h => h(List)
+  render: h => h(App)
 });
 
 /* 动态设置 html font-size 函数 */

@@ -1,8 +1,7 @@
 <template>
   <div class="folder">
     <cloud-header :title="title"></cloud-header>
-    <h3>{{ msg }}</h3>
-    <h6>测试</h6>
+    <list></list>
     <cloud-footer :user="user"></cloud-footer>
   </div>
 </template>
@@ -10,6 +9,7 @@
 <script>
   import Header from '../header/Header.vue'
   import Footer from '../footer/Footer.vue'
+  import List from '../list/List.vue'
 
   export default {
     name: 'folder',
@@ -22,6 +22,7 @@
     },
     components: {
       'cloud-header': Header,
+      'list': List,
       'cloud-footer': Footer
     }
   }
