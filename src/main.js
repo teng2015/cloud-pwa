@@ -49,6 +49,6 @@ new Vue({
   window.dpr = dpr;
   window.rem = rem;
 
-  console.log(dpr);
-  console.log(rem);
+  //console.log(dpr);
+  //console.log(rem);
 })(window, document);

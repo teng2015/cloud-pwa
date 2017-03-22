@@ -1,0 +1,321 @@
+/* 文件列表 */
+.icon-synchronous, .icon-folder, .icon-photo, .icon-video, .icon-document, .icon-application, .icon-folder-group, .icon-music, .icon-3gp, .icon-7zip, .icon-aac, .icon-apk, .icon-asf, .icon-asp, .icon-avi, .icon-bmp, .icon-bt, .icon-chm, .icon-dat, .icon-dll, .icon-doc, .icon-docx, .icon-epub, .icon-exe, .icon-file, .icon-flac, .icon-flv, .icon-gif, .icon-gz, .icon-htm, .icon-html, .icon-ico, .icon-ico-img, .icon-ico-other, .icon-image, .icon-ipa, .icon-jpeg, .icon-jpg, .icon-js, .icon-jsp, .icon-mkv, .icon-mov, .icon-mp3, .icon-mp3pro, .icon-mp4, .icon-mpeg, .icon-mpg, .icon-pcx, .icon-pdf, .icon-php, .icon-pic, .icon-png, .icon-pps, .icon-ppt, .icon-pptx, .icon-psd, .icon-ra, .icon-ram, .icon-rar, .icon-rm, .icon-rmvb, .icon-rtf, .icon-syn, .icon-tif, .icon-tiff, .icon-ts, .icon-txt, .icon-umd, .icon-vgf, .icon-wav, .icon-web, .icon-wma, .icon-wmv, .icon-xls, .icon-xlsx, .icon-xml, .icon-zip, .icon-unknow, .icon-torrent {
+  background: url(images/file_icon_mini_v2.png) no-repeat;
+  background-size: 2000px 670px;
+}
+
+.icon-folder {
+  background-position: 0 -301*2px
+}
+
+.icon-application {
+  background-position: -35*2px -301*2px
+}
+
+.icon-document {
+  background-position: -70*2px -301*2px
+}
+
+.icon-folder-group {
+  background-position: -105*2px -301*2px
+}
+
+.icon-music {
+  background-position: -140*2px -301*2px
+}
+
+.icon-photo {
+  background-position: -175*2px -301*2px
+}
+
+.icon-video {
+  background-position: -210*2px -301*2px
+}
+
+.icon-synchronous {
+  background-position: -245*2px -301*2px
+}
+
+.icon-3gp {
+  background-position: 2*2px 0
+}
+
+.icon-7zip {
+  background-position: -67*2px 0
+}
+
+.icon-aac {
+  background-position: -137*2px 0
+}
+
+.icon-apk {
+  background-position: -206*2px 0
+}
+
+.icon-asf {
+  background-position: -206*2px -241*2px !important
+}
+
+.icon-asp {
+  background-position: -345*2px 0
+}
+
+.icon-avi {
+  background-position: -415*2px 0
+}
+
+.icon-bmp {
+  background-position: -484*2px 0
+}
+
+.icon-bt {
+  background-position: -553*2px 0
+}
+
+.icon-chm {
+  background-position: -623*2px 0
+}
+
+.icon-dat {
+  background-position: -692*2px 0
+}
+
+.icon-dll {
+  background-position: -762*2px 0
+}
+
+.icon-doc {
+  background-position: -831*2px 0
+}
+
+.icon-docx {
+  background-position: -901*2px 0
+}
+
+.icon-epub {
+  background-position: -970*2px 0
+}
+
+.icon-exe {
+  background-position: 2*2px -60*2px
+}
+
+.icon-file {
+  background-position: -67*2px -60*2px
+}
+
+.icon-flac {
+  background-position: -137*2px -60*2px
+}
+
+.icon-flv {
+  background-position: -206*2px -60*2px
+}
+
+.icon-gif {
+  background-position: -276*2px -60*2px
+}
+
+.icon-gz {
+  background-position: -345*2px -60*2px
+}
+
+.icon-htm {
+  background-position: -415*2px -60*2px
+}
+
+.icon-html {
+  background-position: -484*2px -60*2px
+}
+
+.icon-ico {
+  background-position: -553*2px -60*2px
+}
+
+.icon-ico-img {
+  background-position: -623*2px -60*2px
+}
+
+.icon-ico-other {
+  background-position: -692*2px -60*2px
+}
+
+.icon-image {
+  background-position: -762*2px -60*2px
+}
+
+.icon-ipa {
+  background-position: -831*2px -60*2px
+}
+
+.icon-jpeg {
+  background-position: -901*2px -60*2px
+}
+
+.icon-jpg {
+  background-position: -970*2px -60*2px
+}
+
+.icon-js {
+  background-position: 2*2px -121*2px
+}
+
+.icon-jsp {
+  background-position: -67*2px -121*2px
+}
+
+.icon-mkv {
+  background-position: -137*2px -121*2px
+}
+
+.icon-mov {
+  background-position: -206*2px -121*2px
+}
+
+.icon-mp3 {
+  background-position: -276*2px -121*2px
+}
+
+.icon-mp3pro {
+  background-position: -345*2px -121*2px
+}
+
+.icon-mp4 {
+  background-position: -415*2px -121*2px
+}
+
+.icon-mpeg {
+  background-position: -484*2px -121*2px
+}
+
+.icon-mpg {
+  background-position: -553*2px -121*2px
+}
+
+.icon-pcx {
+  background-position: -692*2px -121*2px
+}
+
+.icon-pdf {
+  background-position: -762*2px -121*2px
+}
+
+.icon-php {
+  background-position: -831*2px -121*2px
+}
+
+.icon-pic {
+  background-position: -901*2px -121*2px
+}
+
+.icon-png {
+  background-position: -970*2px -121*2px
+}
+
+.icon-pps {
+  background-position: 2*2px -181*2px
+}
+
+.icon-ppt {
+  background-position: -67*2px -181*2px
+}
+
+.icon-pptx {
+  background-position: -137*2px -181*2px
+}
+
+.icon-psd {
+  background-position: -206*2px -181*2px
+}
+
+.icon-ra {
+  background-position: -276*2px -181*2px
+}
+
+.icon-ram {
+  background-position: -345*2px -181*2px
+}
+
+.icon-rar {
+  background-position: -415*2px -181*2px
+}
+
+.icon-rm {
+  background-position: -484*2px -181*2px
+}
+
+.icon-rmvb {
+  background-position: -553*2px -181*2px
+}
+
+.icon-rtf {
+  background-position: -623*2px -181*2px
+}
+
+.icon-syn {
+  background-position: -692*2px -181*2px
+}
+
+.icon-tif {
+  background-position: -762*2px -181*2px
+}
+
+.icon-tiff {
+  background-position: -831*2px -181*2px
+}
+
+.icon-ts {
+  background-position: -901*2px -181*2px
+}
+
+.icon-txt {
+  background-position: -970*2px -181*2px
+}
+
+.icon-umd {
+  background-position: 2*2px -241*2px
+}
+
+.icon-unknow {
+  background-position: -67*2px -241*2px
+}
+
+.icon-vgf {
+  background-position: -137*2px -241*2px
+}
+
+.icon-wav {
+  background-position: -276*2px -241*2px
+}
+
+.icon-web {
+  background-position: -345*2px -241*2px
+}
+
+.icon-wma {
+  background-position: -415*2px -241*2px
+}
+
+.icon-wmv {
+  background-position: -484*2px -241*2px
+}
+
+.icon-xls {
+  background-position: -553*2px -241*2px
+}
+
+.icon-xlsx {
+  background-position: -623*2px -241*2px
+}
+
+.icon-xml {
+  background-position: -692*2px -241*2px
+}
+
+.icon-zip {
+  background-position: -762*2px -241*2px
+}
+
+.icon-torrent {
+  background-position: -832*2px -241*2px
+}

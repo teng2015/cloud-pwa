@@ -1,4 +1,4 @@
-@import "../../assets/styles/base.scss";
+@import "sprite.scss";
 
 /* px 转 rem，此时html的字体大小为 16px */
 @function px2rem($px) {
@@ -23,411 +23,154 @@
   background-color: #E9F1F6;
   color: #5E6163;
   line-height: px2rem(24px);
-}
 
-.file-path {
-  overflow: hidden;
+  .file-path {
+    overflow: hidden;
 
-  li {
-    float: left;
-  }
+    li {
+      float: left;
+    }
 
-  a {
-    text-decoration: none;
-    color: #0080BD;
-    display: inline-block;
-    float: left;
-    word-break: break-all;
+    a {
+      text-decoration: none;
+      color: #0080BD;
+      display: inline-block;
+      float: left;
+      word-break: break-all;
+    }
   }
 }
 
 /* 文件列表 */
-.icon-synchronous, .icon-folder, .icon-photo, .icon-video, .icon-document, .icon-application, .icon-folder-group, .icon-music, .icon-3gp, .icon-7zip, .icon-aac, .icon-apk, .icon-asf, .icon-asp, .icon-avi, .icon-bmp, .icon-bt, .icon-chm, .icon-dat, .icon-dll, .icon-doc, .icon-docx, .icon-epub, .icon-exe, .icon-file, .icon-flac, .icon-flv, .icon-gif, .icon-gz, .icon-htm, .icon-html, .icon-ico, .icon-ico-img, .icon-ico-other, .icon-image, .icon-ipa, .icon-jpeg, .icon-jpg, .icon-js, .icon-jsp, .icon-mkv, .icon-mov, .icon-mp3, .icon-mp3pro, .icon-mp4, .icon-mpeg, .icon-mpg, .icon-pcx, .icon-pdf, .icon-php, .icon-pic, .icon-png, .icon-pps, .icon-ppt, .icon-pptx, .icon-psd, .icon-ra, .icon-ram, .icon-rar, .icon-rm, .icon-rmvb, .icon-rtf, .icon-syn, .icon-tif, .icon-tiff, .icon-ts, .icon-txt, .icon-umd, .icon-vgf, .icon-wav, .icon-web, .icon-wma, .icon-wmv, .icon-xls, .icon-xlsx, .icon-xml, .icon-zip, .icon-unknow, .icon-torrent {
-  background: url(images/file_icon_mini_v2.png) no-repeat;
-  background-size: 2000px 670px;
-}
-
-.icon-folder {
-  background-position: 0 -301*2px
-}
-
-.icon-application {
-  background-position: -35*2px -301*2px
-}
-
-.icon-document {
-  background-position: -70*2px -301*2px
-}
-
-.icon-folder-group {
-  background-position: -105*2px -301*2px
-}
-
-.icon-music {
-  background-position: -140*2px -301*2px
-}
-
-.icon-photo {
-  background-position: -175*2px -301*2px
-}
-
-.icon-video {
-  background-position: -210*2px -301*2px
-}
-
-.icon-synchronous {
-  background-position: -245*2px -301*2px
-}
-
-.icon-3gp {
-  background-position: 2*2px 0
-}
-
-.icon-7zip {
-  background-position: -67*2px 0
-}
-
-.icon-aac {
-  background-position: -137*2px 0
-}
-
-.icon-apk {
-  background-position: -206*2px 0
-}
-
-.icon-asf {
-  background-position: -206*2px -241*2px !important
-}
-
-.icon-asp {
-  background-position: -345*2px 0
-}
-
-.icon-avi {
-  background-position: -415*2px 0
-}
-
-.icon-bmp {
-  background-position: -484*2px 0
-}
-
-.icon-bt {
-  background-position: -553*2px 0
-}
-
-.icon-chm {
-  background-position: -623*2px 0
-}
-
-.icon-dat {
-  background-position: -692*2px 0
-}
-
-.icon-dll {
-  background-position: -762*2px 0
-}
-
-.icon-doc {
-  background-position: -831*2px 0
-}
-
-.icon-docx {
-  background-position: -901*2px 0
-}
-
-.icon-epub {
-  background-position: -970*2px 0
-}
-
-.icon-exe {
-  background-position: 2*2px -60*2px
-}
-
-.icon-file {
-  background-position: -67*2px -60*2px
-}
-
-.icon-flac {
-  background-position: -137*2px -60*2px
-}
-
-.icon-flv {
-  background-position: -206*2px -60*2px
-}
-
-.icon-gif {
-  background-position: -276*2px -60*2px
-}
-
-.icon-gz {
-  background-position: -345*2px -60*2px
-}
-
-.icon-htm {
-  background-position: -415*2px -60*2px
-}
-
-.icon-html {
-  background-position: -484*2px -60*2px
-}
-
-.icon-ico {
-  background-position: -553*2px -60*2px
-}
-
-.icon-ico-img {
-  background-position: -623*2px -60*2px
-}
-
-.icon-ico-other {
-  background-position: -692*2px -60*2px
-}
-
-.icon-image {
-  background-position: -762*2px -60*2px
-}
-
-.icon-ipa {
-  background-position: -831*2px -60*2px
-}
-
-.icon-jpeg {
-  background-position: -901*2px -60*2px
-}
-
-.icon-jpg {
-  background-position: -970*2px -60*2px
-}
-
-.icon-js {
-  background-position: 2*2px -121*2px
-}
-
-.icon-jsp {
-  background-position: -67*2px -121*2px
-}
-
-.icon-mkv {
-  background-position: -137*2px -121*2px
-}
-
-.icon-mov {
-  background-position: -206*2px -121*2px
-}
-
-.icon-mp3 {
-  background-position: -276*2px -121*2px
-}
-
-.icon-mp3pro {
-  background-position: -345*2px -121*2px
-}
-
-.icon-mp4 {
-  background-position: -415*2px -121*2px
-}
-
-.icon-mpeg {
-  background-position: -484*2px -121*2px
-}
-
-.icon-mpg {
-  background-position: -553*2px -121*2px
-}
-
-.icon-pcx {
-  background-position: -692*2px -121*2px
-}
-
-.icon-pdf {
-  background-position: -762*2px -121*2px
-}
-
-.icon-php {
-  background-position: -831*2px -121*2px
-}
-
-.icon-pic {
-  background-position: -901*2px -121*2px
-}
-
-.icon-png {
-  background-position: -970*2px -121*2px
-}
-
-.icon-pps {
-  background-position: 2*2px -181*2px
-}
-
-.icon-ppt {
-  background-position: -67*2px -181*2px
-}
-
-.icon-pptx {
-  background-position: -137*2px -181*2px
-}
-
-.icon-psd {
-  background-position: -206*2px -181*2px
-}
-
-.icon-ra {
-  background-position: -276*2px -181*2px
-}
-
-.icon-ram {
-  background-position: -345*2px -181*2px
-}
-
-.icon-rar {
-  background-position: -415*2px -181*2px
-}
-
-.icon-rm {
-  background-position: -484*2px -181*2px
-}
-
-.icon-rmvb {
-  background-position: -553*2px -181*2px
-}
-
-.icon-rtf {
-  background-position: -623*2px -181*2px
-}
-
-.icon-syn {
-  background-position: -692*2px -181*2px
-}
-
-.icon-tif {
-  background-position: -762*2px -181*2px
-}
-
-.icon-tiff {
-  background-position: -831*2px -181*2px
-}
-
-.icon-ts {
-  background-position: -901*2px -181*2px
-}
-
-.icon-txt {
-  background-position: -970*2px -181*2px
-}
-
-.icon-umd {
-  background-position: 2*2px -241*2px
-}
-
-.icon-unknow {
-  background-position: -67*2px -241*2px
-}
-
-.icon-vgf {
-  background-position: -137*2px -241*2px
-}
-
-.icon-wav {
-  background-position: -276*2px -241*2px
-}
-
-.icon-web {
-  background-position: -345*2px -241*2px
-}
-
-.icon-wma {
-  background-position: -415*2px -241*2px
-}
-
-.icon-wmv {
-  background-position: -484*2px -241*2px
-}
-
-.icon-xls {
-  background-position: -553*2px -241*2px
-}
-
-.icon-xlsx {
-  background-position: -623*2px -241*2px
-}
-
-.icon-xml {
-  background-position: -692*2px -241*2px
-}
-
-.icon-zip {
-  background-position: -762*2px -241*2px
-}
-
-.icon-torrent {
-  background-position: -832*2px -241*2px
-}
-
 .file-lists {
   position: relative;
   min-height: 1000px;
+}
 
-  .file {
-    position: relative;
-    display: block;
-    width: 100%;
-    height: px2px(54px);
-    border-top: 1px solid #D1DCE3;
-    background-color: #FAFDFE;
-    color: #5E6163;
-    overflow: hidden;
+.file-box {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: px2px(54px);
+  border-top: 1px solid #D1DCE3;
+  background-color: #FAFDFE;
+  color: #5E6163;
+  overflow: hidden;
+}
+
+.column-folder, .column-file, .handle-box {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  will-change: transform;
+  transition: all .3s;
+}
+
+.is-handling {
+  .column-folder, .column-file, .handle-box {
+    transform: translate3d(0, -100%, 0);
   }
+}
 
-  .icon-container {
-    float: left;
-    display: flex;
-    width: px2px(60px);
-    height: 100%;
-    justify-content: center;
-    align-items: center;
-  }
-
-  /*  .column-file {
-      .icon-container {
-        width: px2px(55px);
-      }
-    }*/
+.icon-container {
+  float: left;
+  display: inline-flex;
+  width: 16%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
 
   .icon {
     display: block;
     width: px2px(35px);
     height: px2px(30px);
   }
+}
 
-  .text {
-    float: left;
-    display: block;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    line-height: px2px(54px);
+.column-file-name {
+  float: left;
+  display: inline-flex;
+  width: 68%;
+  height: 100%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  flex-wrap: wrap;
+  align-items: center;
+  overflow: hidden;
+}
+
+.column-file-info {
+  @extend .column-file-name;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+  .name, .info {
+    width: 100%;
   }
 
-  .column-file-info {
-    float: left;
-    width: 72%;
+  .name {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
+  .info {
+    margin-top: 4px;
+  }
+
+  .size, .time {
+    display: inline-block;
+    font-size: 26px;
+    color: #9BABBA;
+  }
+
+  .size {
+    margin-right: 50px;
+  }
+}
+
+.arrow {
+  @extend .icon-container;
+
+  .icon {
+    width: 32px;
+    height: 32px;
+    background: transparent url(./images/arrow_01.png) center no-repeat;
+    background-size: 100% auto;
+  }
+}
+
+.handle-box {
+  background: #e0e1e1;
+  box-shadow: inset 0 2px 5px #d6d7d6;
+  color: #9BABBA;
+
+  .btn-container {
+    width: 100%;
     height: 100%;
+  }
 
-    .text {
-      display: block;
-      width: 100%;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-      height: px2px(16px);
-      margin-top: px2px(10px);
-      line-height: px2px(16px);
-    }
+  .btn {
+    float: left;
+    display: block;
+    width: 20%;
+    height: 100%;
+    padding-top: 60px;
+    background: transparent center 20px no-repeat;
+    background-size: auto 40px;
+    text-align: center;
+    color: #575757;
+    font-size: inherit;
+  }
 
-    .size, .modified-time {
-      display: inline-block;
-      font-size: 26px;
-      color: #9BABBA;
-    }
+  .view {
+    background-image: url(images/preview-icon.png);
+  }
+  .mark {
+    background-image: url(images/video-preview-icon.png);
+  }
+  .share {
+    background-image: url(images/share-icon.png);
   }
 }

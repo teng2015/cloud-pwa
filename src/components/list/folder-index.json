@@ -1,64 +1,5 @@
-<template>
-  <div class="file-container" @click="hideHandleBox()">
-    <!-- 面包屑导航 -->
-    <div class="breadcrumb">
-      <ul class="file-path">
-        <li title="全部文件">
-          <a href="javascript:">全部文件</a>&nbsp;&gt;&nbsp;
-        </li>
-        <li title="测试专用">
-          <a href="javascript:">测试专用</a>&nbsp;&gt;&nbsp;
-        </li>
-        <li title="嵌套文件夹"><a href="javascript:">嵌套文件夹</a>&nbsp;&gt;&nbsp;
-        </li>
-        <li> ... &gt;</li>
-        <li title="03"><a href="javascript:">03</a>&nbsp;&gt;&nbsp;
-        </li>
-        <li title="04"><a href="javascript:">04</a>&nbsp;&gt;&nbsp;
-        </li>
-        <li title="05">05</li>
-      </ul>
-    </div>
-
-    <ul class="file-lists">
-      <li class="file-box"
-          v-for="(item, index) in fileData"
-          :class="{'is-handling': handlingIndex === index}">
-
-        <div :class="item.isFolder ? 'column-folder' : 'column-file'">
-          <div class="icon-container">
-            <div class="icon"
-                 :class="item.isFolder ? 'icon-folder' : 'icon-' + item.fileType.toLowerCase()"></div>
-          </div>
-          <div class="column-file-name" v-if="item.isFolder" v-text="item.fileName"></div>
-          <div class="column-file-info" v-if="!item.isFolder">
-            <p class="name" v-text="item.fileName"></p>
-            <p class="info">
-              <span class="size">{{ item.fileSize | formatFileSize }}</span>
-              <span class="time">{{ item.lastOpTime | formatOptTime }}</span>
-            </p>
-          </div>
-          <div class="arrow">
-            <button class="icon" @click.stop="handleFile(index)"></button>
-          </div>
-        </div>
-        <div class="handle-box" @click.stop>
-          <div class="btn-container">
-            <button class="btn view">查看</button>
-            <button class="btn mark">标星</button>
-            <button class="btn share">分享</button>
-          </div>
-        </div>
-
-      </li>
-    </ul>
-  </div>
-</template>
-
-<script>
-  import axios from 'axios'
-
-  let fileData = [
+{
+  "data": [
     {
       "createTime": "2017-03-21 22:57:48",
       "fileId": "0",
@@ -78,48 +19,6 @@
       "fileId": "-12",
       "fileIdDigest": "E71CB9FB19B54A35D5D27EE5E91410F80203EDDB843AB5B024B839EB579DDC4DDF991FD00FE8199E",
       "fileName": "我的图片",
-      "fileType": "",
-      "groupSpaceInfo": {
-        "groupSpaceType": 0
-      },
-      "isFolder": true,
-      "isStarred": false,
-      "lastOpTime": "2017-03-21 22:57:48",
-      "parentId": "-11"
-    },
-    {
-      "createTime": "2017-03-21 22:57:48",
-      "fileId": "-14",
-      "fileIdDigest": "02AE7CCE86CB46EB678B21639E4F21D6F91F5D50007FC8AE3E8B76E8AC7209DCEDE788F736998A43",
-      "fileName": "我的音乐",
-      "fileType": "",
-      "groupSpaceInfo": {
-        "groupSpaceType": 0
-      },
-      "isFolder": true,
-      "isStarred": false,
-      "lastOpTime": "2017-03-21 22:57:48",
-      "parentId": "-11"
-    },
-    {
-      "createTime": "2017-03-21 22:57:48",
-      "fileId": "-13",
-      "fileIdDigest": "94E809923B2E0B591A6949BE8F2896DC56A29CF361C3BDEC9248BB237D7DDF2F882E0D83BD5EB8A2",
-      "fileName": "我的视频",
-      "fileType": "",
-      "groupSpaceInfo": {
-        "groupSpaceType": 0
-      },
-      "isFolder": true,
-      "isStarred": false,
-      "lastOpTime": "2017-03-21 22:57:48",
-      "parentId": "-11"
-    },
-    {
-      "createTime": "2017-03-21 22:57:48",
-      "fileId": "-15",
-      "fileIdDigest": "00AEE62F946B091295E092620550244213941CB883F917AD321E023801BAFFEC2F4C3A52B905CDFF",
-      "fileName": "我的文档",
       "fileType": "",
       "groupSpaceInfo": {
         "groupSpaceType": 0
@@ -284,100 +183,15 @@
       "mediaType": 1,
       "parentId": "-11"
     }
-  ];
-  export default {
-    props: ['list'],
-    data () {
-      return {
-        fileData: fileData,
-        handlingFlag: false,
-        handlingIndex: null
-      }
-    },
-    mounted: function () {
-      this.$nextTick(function () {
-        this.getData();
-      });
-    },
-    methods: {
-      getData: function () {
-        axios.get('')
-          .then(function (response) {
-            console.log(response.data);
-          })
-          .catch(function (error) {
-            console.log(error);
-          });
-      },
-      handleFile: function (index) {
-        let _this = this;
-        //console.log(_this.handlingFlag);
-        _this.handlingIndex = index;
-        _this.handlingFlag = true;
-      },
-      hideHandleBox: function (msg, event) {
-        let _this = this;
-        if (_this.handlingFlag === true) {
-          _this.handlingIndex = null;
-          _this.handlingFlag = false;
-        }
-      }
-    },
-    filters: {
-      formatFileSize: function (value) {
-        let range = null;
-        /*
-         * 0~1M --> range = 0
-         * 1M~1G --> range = 1
-         * 1G+ --> range = 2
-         * */
-        range = value < 1024 * 1024 ? 0
-          : (value < 1024 * 1024 * 1024 ? 1 : 2);
-
-        switch (range) {
-          case 0:
-            return `大小：${Math.round(value / 1024 * 100) / 100}K`;
-          case 1:
-            return `大小：${Math.round(value / (1024 * 1024) * 100) / 100}M`;
-          case 2:
-            return `大小：${Math.round(value / (1024 * 1024 * 1024) * 100) / 100}G`;
-          default:
-            break;
-        }
-      },
-      formatOptTime: function (date) {
-        let originDate = new Date(date);
-        /* 时间差 ms */
-        let deltaMillisecond = Date.now() - originDate.valueOf();
-
-        //let second = Math.floor(deltaMillisecond / 1000);
-        let minute = Math.floor(deltaMillisecond / (1000 * 60));
-        let hour = Math.floor(deltaMillisecond / (1000 * 60 * 60));
-        let day = Math.floor(deltaMillisecond / (1000 * 60 * 60 * 24));
-        let mouth = Math.floor(deltaMillisecond / (1000 * 60 * 60 * 24 * 30));
-        let year = Math.floor(deltaMillisecond / (1000 * 60 * 60 * 24 * 365));
-
-        switch (true) {
-          case year > 0:
-            return `${year}年前`;
-          case mouth > 0:
-            return `${mouth}月前`;
-          case day > 0:
-            return `${day}天前`;
-          case hour > 0:
-            return `${hour}小时前`;
-          default:
-            return `${minute}分钟前`;
-        }
-      }
+  ],
+  "pageNum": 1,
+  "pageSize": 60,
+  "path": [
+    {
+      "fileId": "-11",
+      "fileName": "全部文件",
+      "isCoShare": 0
     }
-  }
-
-</script>
-
-<!-- scoped -->
-<style lang="scss">
-  /* 设备列表 */
-  @import "list.scss";
-
-</style>
+  ],
+  "recordCount": 12
+}
