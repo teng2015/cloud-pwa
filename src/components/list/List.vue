@@ -24,32 +24,32 @@
       <li class="file-box"
           v-for="(item, index) in fileData"
           :class="{'is-handling': handlingIndex === index}">
-
-        <div :class="item.isFolder ? 'column-folder' : 'column-file'">
-          <div class="icon-container">
-            <div class="icon"
-                 :class="item.isFolder ? 'icon-folder' : 'icon-' + item.fileType.toLowerCase()"></div>
+        <router-link class="file-link" :to="'/folder/' + item.fileId" @click="cl('clicked')">
+          <div :class="item.isFolder ? 'column-folder' : 'column-file'">
+            <div class="icon-container">
+              <div class="icon"
+                   :class="item.isFolder ? 'icon-folder' : 'icon-' + item.fileType.toLowerCase()"></div>
+            </div>
+            <div class="column-file-name" v-if="item.isFolder" v-text="item.fileName"></div>
+            <div class="column-file-info" v-if="!item.isFolder">
+              <p class="name" v-text="item.fileName"></p>
+              <p class="info">
+                <span class="size">{{ item.fileSize | formatFileSize }}</span>
+                <span class="time">{{ item.lastOpTime | formatOptTime }}</span>
+              </p>
+            </div>
+            <div class="arrow">
+              <button class="icon" @click.stop.prevent="handleFile(index)"></button>
+            </div>
           </div>
-          <div class="column-file-name" v-if="item.isFolder" v-text="item.fileName"></div>
-          <div class="column-file-info" v-if="!item.isFolder">
-            <p class="name" v-text="item.fileName"></p>
-            <p class="info">
-              <span class="size">{{ item.fileSize | formatFileSize }}</span>
-              <span class="time">{{ item.lastOpTime | formatOptTime }}</span>
-            </p>
+          <div class="handle-box" @click.stop.prevent>
+            <div class="btn-container">
+              <button class="btn view">重命名</button>
+              <button class="btn mark">删除</button>
+              <button class="btn share">分享</button>
+            </div>
           </div>
-          <div class="arrow">
-            <button class="icon" @click.stop="handleFile(index)"></button>
-          </div>
-        </div>
-        <div class="handle-box" @click.stop>
-          <div class="btn-container">
-            <button class="btn view">查看</button>
-            <button class="btn mark">标星</button>
-            <button class="btn share">分享</button>
-          </div>
-        </div>
-
+        </router-link>
       </li>
     </ul>
   </div>
@@ -289,17 +289,23 @@
     props: ['list'],
     data () {
       return {
+        /*文件数据*/
         fileData: fileData,
+        /*文件操作栏 Flag*/
         handlingFlag: false,
+        /*显示操作栏的文件索引*/
         handlingIndex: null
       }
     },
     mounted: function () {
       this.$nextTick(function () {
-        this.getData();
+        //this.getData();
       });
     },
     methods: {
+      cl: function (value) {
+        console.log(value)
+      },
       getData: function () {
         axios.get('')
           .then(function (response) {

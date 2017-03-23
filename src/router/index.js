@@ -12,7 +12,7 @@ Vue.use(Router);
 export default new Router({
   routes: [
     {
-      path: '/folder',
+      path: '/folder/:id',
       name: 'Folder',
       component: Folder
     },

@@ -24,7 +24,7 @@
       <!-- 链接区 -->
       <ul class="router-box">
         <li class="router folder">
-          <router-link class="link" to="/folder">文件管理</router-link>
+          <router-link class="link" to="/folder/index">文件管理</router-link>
         </li>
         <li class="router favorite">
           <router-link class="link" to="/favorite">心标文件</router-link>
